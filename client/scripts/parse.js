@@ -1,5 +1,6 @@
 var Parse = {
 
+  // when we are ready to use our node server, change Parse.server to localhost 3000
   server: `http://parse.${window.CAMPUS}.hackreactor.com/chatterbox/classes/messages`,
 
   create: function(message, successCB, errorCB = null) {
@@ -14,7 +15,7 @@ var Parse = {
         console.error('chatterbox: Failed to create message', error);
       }
     });
-      },
+  },
 
   readAll: function(successCB, errorCB = null) {
     $.ajax({
