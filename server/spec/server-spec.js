@@ -4,13 +4,17 @@
 var mysql = require('mysql');
 var request = require('request'); // You might need to npm install the request module!
 var expect = require('chai').expect;
-var config = require('../config/config');
+var config = require('../config/config.js');
 
 describe('Persistent Node Chat Server', function() {
   var dbConnection;
 
   beforeEach(function(done) {
-    dbConnection = mysql.createConnection(config.mySQLcred);
+    dbConnection = mysql.createConnection({
+      user: 'root',
+      password: 'SQLk1ng!',
+      database: 'chat'
+    });
     dbConnection.connect();
 
     var tablename = "messages"; // TODO: fill this out
