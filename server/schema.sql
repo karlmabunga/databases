@@ -11,13 +11,15 @@ CREATE TABLE messages (
 );
 
 CREATE TABLE users (
-  id INTEGER PRIMARY KEY,
-  username TEXT
+  id int NOT NULL AUTO_INCREMENT,
+  username TEXT,
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE rooms (
-  id INTEGER PRIMARY KEY,
-  room_name INTEGER
+  id int NOT NULL AUTO_INCREMENT,
+  room_name INTEGER,
+  PRIMARY KEY (id)
 );
 
 /* Create other tables and define schemas for them here! */
