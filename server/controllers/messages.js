@@ -1,4 +1,5 @@
 var models = require('../models');
+// console.log('models: ', models);
 
 module.exports = {
   get: function (req, res) {
